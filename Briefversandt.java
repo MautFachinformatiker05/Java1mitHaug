@@ -14,7 +14,7 @@ public class Briefversandt {
 		anzahl = sc.nextInt();
 		System.out.println("Schicken sie die Briefe als Einschreiben? (Ja oder Nein)");
 		einsch = sc.next();
-		System.out.println("Wie viel wiegt ein Brief in Gramm? Sie könnem die Waage nebenan nutzen. (Antwort in Zahlen)");
+		System.out.println("Wie viel wiegt ein Brief in Gramm? Sie können die Waage nebenan nutzen. (Antwort in Zahlen)");
 		gewicht = sc.nextInt();
 		System.out.println("Wie hoch ist ein Brief in Millimeter? (Antwort in Zahlen)");
 		hohe =  sc.nextInt();
