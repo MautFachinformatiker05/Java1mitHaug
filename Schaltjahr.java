@@ -1,19 +1,19 @@
+package uebungenAbfragen;
+
 import java.util.Scanner;
 
 public class Schaltjahr {
 
 	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		int schalt = 0;
-		System.out.println("Geben sie eine Jahreszahl nach Christus an.");
-		schalt = sc.nextInt();
-		
-		if (schalt%400==0 || schalt%4==0 && schalt%100!=0)
-			System.out.println("Dieses Jahr ist ein  Schaltjahr.");
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Bitte geben Sie das Jahr ein");
+		int jahr = sc.nextInt();
+		if (jahr%400 == 0 || jahr %4==0 && jahr %100 != 0)
+			System.out.println("Das Jahr " +jahr+" ist ein Schlatjahr");
 		else
-			System.out.println("Dieses Jahr ist kein Schaltjahr.");
-		sc.close();	
+			System.out.println("Das Das Jahr " +jahr+" ist kein Schlatjahr");
+
 	}
 
 }
