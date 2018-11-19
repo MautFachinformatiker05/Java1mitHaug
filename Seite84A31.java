@@ -12,11 +12,12 @@ public class Seite84A31 {
 		int erg = 0;
 		cs.close();
 		
-		for (div=10;zahl/div!=0;div*=10);
-		for (div=div;div!=1;div/=10)
+		for (;zahl/div!=0;div*=10);
+		while (div!=1)
 		{
 			erg+= zahl%10;
 			zahl/=10;
+			div/=10;
 		}
 		System.out.println(erg);
 	}
