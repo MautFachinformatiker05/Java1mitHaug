@@ -2,23 +2,16 @@ package Schleifen;
 
 import java.util.Scanner;
 
-public class Seite81A21 {	//HANGMAN							HAT EINEN RIESENBUG				BIS EIN BUCHSTABE ERRATEN WIRD; WIRD EINE STELLE ZU VIEL ANGEZEIGT
+public class Seite81A21 {	//HANGMAN
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		String wort = "";									// Das eingegebene Wort
+		String wort = "";										// Das eingegebene Wort
 		String kopie = "";										// wird an einer Stelle benötigt, um hangman zu aktualisieren
-		while (0==wort.length())
-		{
-			System.out.print("Geben sie ein Wort für Hangman ein: ");
-			kopie = sc.next().toUpperCase();
-			for (int i=0;i<kopie.length();i++)
-			{
-				wort += kopie.charAt(i);
-			}
-		}
-		String hangman = wort.replaceAll(".?", "-");			// die Hilfestellung ist wort, aber jedes zeichen ist ein '-'
+		System.out.print("Geben sie ein Wort für Hangman ein: ");
+		wort = sc.next().toUpperCase();
+		String hangman = wort.replaceAll("\\w", "-");			// die Hilfestellung ist wort, aber jedes zeichen ist ein '-'
 		kopie = "";
 		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+hangman);		// ein - zu viel wird am Anfang angezeigt
 		char ver;												// Der Char, aus dem String, den der Nutzer angegeben hat
@@ -41,15 +34,16 @@ public class Seite81A21 {	//HANGMAN							HAT EINEN RIESENBUG				BIS EIN BUCHSTA
 			for (int i=0;i<wort.length();i++)					// for-schleife, die über die chars im wort iteriert
 			{
 				if (ver == wort.charAt(i))						// Ist die Eingabe im Wort vorhanden?
-				{	kopie = hangman;
-				hangman = "";
-					for (int x=0;x<wort.length();x++)			// Iteriert schon wieder über jeden Buchstaben, um hangman neu aufzubauen
-					{
-						if (i==x)
-							hangman += ver;						// fügt die Eingabe an hangman an
-						else
-							hangman += kopie.charAt(x);			// fügt die Kopie von hangman an hangman an
-					}
+				{	
+					kopie = hangman;
+					hangman = "";
+						for (int x=0;x<wort.length();x++)			// Iteriert schon wieder über jeden Buchstaben, um hangman neu aufzubauen
+						{
+							if (i==x)
+								hangman += ver;						// fügt die Eingabe an hangman an
+							else
+								hangman += kopie.charAt(x);			// fügt die Kopie von hangman an hangman an
+						}
 				
 				}
 			} 
