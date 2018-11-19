@@ -13,7 +13,7 @@ public class Seite81A21 {	//HANGMAN
 		wort = sc.next().toUpperCase();
 		String hangman = wort.replaceAll("\\w", "-");			// die Hilfestellung ist wort, aber jedes zeichen ist ein '-'
 		kopie = "";
-		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+hangman);		// ein - zu viel wird am Anfang angezeigt
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+hangman);
 		char ver;												// Der Char, aus dem String, den der Nutzer angegeben hat
 		String verS;											// Der String, der vom Nutzer eingegeben werden muss 	//darf nur eine Stelle haben
 
@@ -25,8 +25,6 @@ public class Seite81A21 {	//HANGMAN
 			if (verS.length()!=1)								// wurde nur ein Buchstabe eingegeben?
 			{
 				System.out.println("Sie dürfen nur EINEN Buchstaben eingeben!");
-				System.out.print("Eingabe: ");
-				verS = vs.next();
 				continue;
 			}
 			ver = verS.toUpperCase().charAt(0);								// Die Eingabe wird zum char
