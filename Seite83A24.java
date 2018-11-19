@@ -17,19 +17,19 @@ public class Seite83A24 {
 			if (zahl1==zahl2 && zahl2==zahl3)
 			{
 				guthaben+=9;
-				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\t10 MÃ¼nzen\t Guthaben: "+guthaben+" MÃ¼nzen");
+				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\t10 Münzen\t Guthaben: "+guthaben+" Münzen");
 			}
 			
-			if (zahl1==zahl2 || zahl2==zahl3)
+			if (zahl1==zahl2 || zahl2==zahl3 || zahl1==zahl3)
 			{
 				guthaben+=2;
-				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\t3  MÃ¼nzen\t Guthaben: "+guthaben+" MÃ¼nzen");
+				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\t3  Münzen\t Guthaben: "+guthaben+" Münzen");
 			}
 			
-			if (zahl1!=zahl2 && zahl2!=zahl3)
+			if (zahl1!=zahl2 && zahl2!=zahl3 && zahl1!=zahl3)
 			{
 				guthaben-=1;
-				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\tVerloren!\t Guthaben: "+guthaben+" MÃ¼nzen");
+				System.out.println(zahl1+"\t"+zahl2+"\t"+zahl3+"\tVerloren!\t Guthaben: "+guthaben+" Münzen");
 			}
 		}
 
